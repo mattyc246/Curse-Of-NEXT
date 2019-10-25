@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import bat from "../assets/images/bat.png";
 import bible from "../assets/images/bible.png";
 import book3 from "../assets/images/book 3.png";
@@ -27,6 +27,13 @@ const FlipCard = ({ flipped, value, matched, cardId, flipCard, clickable }) => {
     man,
     skull
   ];
+
+  useEffect(() => {
+    cardImg.forEach(image => {
+      new Image().src = image;
+    });
+  }, []);
+
   return (
     <>
       <div

@@ -17,6 +17,8 @@ const SpotTheDifference = ({ history }) => {
     { id: 8, posX: "81%", posY: "15.5%", size: "8%", visible: false }
   ]);
 
+  const spotTheDiffImg = [SpotTheDiff];
+
   const [buttonShown, setButtonShown] = useState(false);
 
   const [spotsFound, setSpotsFound] = useState(0);
@@ -40,6 +42,9 @@ const SpotTheDifference = ({ history }) => {
   };
 
   useEffect(() => {
+    spotTheDiffImg.forEach(image => {
+      new Image().src = image;
+    });
     startTimer();
   }, []);
 
@@ -79,7 +84,7 @@ const SpotTheDifference = ({ history }) => {
                 />
               );
             })}
-            <img src={SpotTheDiff} alt="std" style={{ width: "100%" }} />
+            <img src={spotTheDiffImg[0]} alt="std" style={{ width: "100%" }} />
           </div>
         </div>
       )}
