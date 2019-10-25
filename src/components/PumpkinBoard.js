@@ -47,16 +47,18 @@ const PumpkinBoard = ({ setInPlay }) => {
   return (
     <>
       <div className="pumpkin-board">
-        {pumpkinPatch.map(pumpkin => {
-          return (
-            <PumpkinPatch
-              key={pumpkin.id}
-              pumpkinId={pumpkin.id}
-              clickCount={pumpkin.clickCount}
-              smashPumpkin={smashPumpkin}
-            />
-          );
-        })}
+        <div className="pumpkin-board-content">
+          {pumpkinPatch.map(pumpkin => {
+            return (
+              <PumpkinPatch
+                key={pumpkin.id}
+                pumpkinId={pumpkin.id}
+                clickCount={pumpkin.clickCount}
+                smashPumpkin={smashPumpkin}
+              />
+            );
+          })}
+        </div>
       </div>
     </>
   );

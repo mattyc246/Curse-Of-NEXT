@@ -69,16 +69,40 @@ body {
 }
 
 .pumpkin-board {
-  width: 100%;
-  height: 70%;
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background: url(./assets/images/patch.png);
+  background-repeat: no-repeat;
+  background-size: contain;
   box-sizing: border-box;
   border: 2px solid rgb(204, 91, 16);
   border-radius: 5px;
-  padding: 10px;
+}
+
+.pumpkin-board:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+  /* initial ratio of 1:1*/
+}
+
+.pumpkin-board-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 100%;
+  height: 100%;
+  text-align: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 5%;
+  box-sizing: border-box;
 }
 
 .pumpkin-square {
