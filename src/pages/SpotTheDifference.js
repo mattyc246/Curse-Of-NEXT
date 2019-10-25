@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import MainContainer from "../containers/MainContainer";
 import SpotTheDiff from "../assets/images/spot-the-diff.png";
 import DiffCircle from "../components/DiffCircle";
+import ScareBar from "../components/ScareBar";
+import useStores from "../hooks/useStores";
 
 const SpotTheDifference = ({ history }) => {
   const [diffCircles, setDiffCircles] = useState([
@@ -19,6 +21,10 @@ const SpotTheDifference = ({ history }) => {
 
   const [spotsFound, setSpotsFound] = useState(0);
 
+  const {
+    gameStore: { startTimer }
+  } = useStores();
+
   const spottedDiff = circleId => {
     let newCircles = diffCircles.map(circle => {
       return { ...circle };
@@ -34,6 +40,10 @@ const SpotTheDifference = ({ history }) => {
   };
 
   useEffect(() => {
+    startTimer();
+  }, []);
+
+  useEffect(() => {
     if (spotsFound === 8) {
       setTimeout(() => {
         setButtonShown(true);
@@ -43,35 +53,35 @@ const SpotTheDifference = ({ history }) => {
 
   return (
     <MainContainer>
-      <div className="flex-img-box">
-        <div className="spd-container">
-          {diffCircles.map(circle => {
-            return (
-              <DiffCircle
-                key={circle.id}
-                circleId={circle.id}
-                posX={circle.posX}
-                posY={circle.posY}
-                size={circle.size}
-                visible={circle.visible}
-                spottedDiff={spottedDiff}
-              />
-            );
-          })}
-          <img src={SpotTheDiff} alt="std" style={{ width: "100%" }} />
-        </div>
-      </div>
+      <ScareBar />
       {buttonShown ? (
         <button
           onClick={() => {
             history.push("/round-2");
           }}
-          className="start-btn font-alt"
+          className="start-btn centered font-alt"
         >
           Next Round
         </button>
       ) : (
-        ""
+        <div className="flex-img-box">
+          <div className="spd-container">
+            {diffCircles.map(circle => {
+              return (
+                <DiffCircle
+                  key={circle.id}
+                  circleId={circle.id}
+                  posX={circle.posX}
+                  posY={circle.posY}
+                  size={circle.size}
+                  visible={circle.visible}
+                  spottedDiff={spottedDiff}
+                />
+              );
+            })}
+            <img src={SpotTheDiff} alt="std" style={{ width: "100%" }} />
+          </div>
+        </div>
       )}
     </MainContainer>
   );

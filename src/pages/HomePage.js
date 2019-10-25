@@ -1,7 +1,11 @@
 import React from "react";
 import MainContainer from "../containers/MainContainer";
+import useStores from "../hooks/useStores";
 
 const HomePage = ({ history }) => {
+  const {
+    gameStore: { startPlaying }
+  } = useStores();
   return (
     <MainContainer>
       <h1 className="font-main text-orange big-font">
@@ -22,6 +26,7 @@ const HomePage = ({ history }) => {
       <button
         className="start-btn font-alt"
         onClick={() => {
+          startPlaying();
           history.push("/round-1");
         }}
       >

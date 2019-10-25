@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import PrivateRoute from "./helpers/PrivateRoute";
 import HomePage from "./pages/HomePage";
 import CardMatch from "./pages/CardMatch";
 import Scare from "./pages/Scare";
@@ -19,31 +20,31 @@ function App() {
             return <HomePage {...props} />;
           }}
         />
-        <Route
+        <PrivateRoute
           path="/round-1"
           component={props => {
             return <SpotTheDifference {...props} />;
           }}
         />
-        <Route
+        <PrivateRoute
           path="/round-2"
           component={props => {
             return <PumpkinSmash {...props} />;
           }}
         />
-        <Route
+        <PrivateRoute
           path="/round-3"
           component={props => {
             return <CardMatch {...props} />;
           }}
         />
-        <Route
+        <PrivateRoute
           path="/scare"
           component={props => {
             return <Scare {...props} />;
           }}
         />
-        <Route
+        <PrivateRoute
           path="/end"
           component={props => {
             return <EndPage {...props} />;

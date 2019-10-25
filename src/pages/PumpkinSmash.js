@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import MainContainer from "../containers/MainContainer";
+import PumpkinBoard from "../components/PumpkinBoard";
+import ScareBar from "../components/ScareBar";
 
 const PumpkinSmash = ({ history }) => {
+  const [inPlay, setInPlay] = useState(true);
   return (
     <MainContainer>
-      <h1>PumpkinSmash</h1>
-      <button
-        className="start-btn font-alt"
-        onClick={() => {
-          history.push("/round-3");
-        }}
-      >
-        Start Scaring
-      </button>
+      <ScareBar />
+      {inPlay ? (
+        <PumpkinBoard setInPlay={setInPlay} />
+      ) : (
+        <button
+          onClick={() => {
+            history.push("/round-3");
+          }}
+          className="start-btn centered font-alt"
+        >
+          Next Round
+        </button>
+      )}
     </MainContainer>
   );
 };
