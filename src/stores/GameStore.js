@@ -20,6 +20,10 @@ class GameStore {
     }, 1000);
   };
 
+  stopTimer = () => {
+    clearInterval(this.timer);
+  };
+
   startPlaying = () => {
     this.inPlay = true;
   };

@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import MainContainer from "../containers/MainContainer";
 import SpotTheDiff from "../assets/images/spot-the-diff.png";
 import DiffCircle from "../components/DiffCircle";
 import ScareBar from "../components/ScareBar";
-import useStores from "../hooks/useStores";
+import ScaryImage from "../assets/images/portrait-lady-2.jpg";
+import ScreamAudio from "../assets/audio/terrible-scream.mp3";
 
 const SpotTheDifference = ({ history }) => {
+  const audioFile = new Audio(ScreamAudio);
+
   const [diffCircles, setDiffCircles] = useState([
     { id: 1, posX: "57%", posY: "20%", size: "10%", visible: false },
     { id: 2, posX: "68%", posY: "16.5%", size: "8%", visible: false },
@@ -23,9 +26,7 @@ const SpotTheDifference = ({ history }) => {
 
   const [spotsFound, setSpotsFound] = useState(0);
 
-  const {
-    gameStore: { startTimer }
-  } = useStores();
+  const [scareMe, setScareMe] = useState(false);
 
   const spottedDiff = circleId => {
     let newCircles = diffCircles.map(circle => {
@@ -45,7 +46,6 @@ const SpotTheDifference = ({ history }) => {
     spotTheDiffImg.forEach(image => {
       new Image().src = image;
     });
-    startTimer();
   }, []);
 
   useEffect(() => {
@@ -59,14 +59,22 @@ const SpotTheDifference = ({ history }) => {
   return (
     <MainContainer>
       <ScareBar />
-      {buttonShown ? (
+      {scareMe ? (
+        <div className="flex-img-box">
+          <img className="scary-lady" src={ScaryImage} alt="scary-lady" />
+        </div>
+      ) : buttonShown ? (
         <button
           onClick={() => {
-            history.push("/round-2");
+            setScareMe(true);
+            audioFile.play();
+            setTimeout(() => {
+              history.push("end");
+            }, 2000);
           }}
           className="start-btn centered font-alt"
         >
-          Next Round
+          Continue
         </button>
       ) : (
         <div className="flex-img-box">
@@ -88,6 +96,13 @@ const SpotTheDifference = ({ history }) => {
           </div>
         </div>
       )}
+      {/* <audio
+        ref={audioFile}
+        src={ScreamAudio}
+        onEnded={() => {
+          history.push("/end");
+        }}
+      /> */}
     </MainContainer>
   );
 };

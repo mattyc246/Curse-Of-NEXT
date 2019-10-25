@@ -243,6 +243,10 @@ body {
     width: 80%;
     position: relative;
   }
+  .pumpkin-board {
+    position: relative;
+    width: 100%;
+  }
 }
 
 @media (max-width: 620px) {
@@ -264,5 +268,9 @@ body {
   }
   .start-btn {
     bottom: 5%;
+  }
+  .pumpkin-board {
+    position: relative;
+    width: 100%;
   }
 }

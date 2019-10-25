@@ -52,7 +52,7 @@ const CardBoard = ({ history }) => {
 
     if (winner) {
       setTimeout(() => {
-        history.push("/scare");
+        history.push("/round-3");
       }, 800);
     } else {
       callback();

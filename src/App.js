@@ -21,19 +21,19 @@ function App() {
           }}
         />
         <PrivateRoute
-          path="/round-1"
+          path="/round-3"
           component={props => {
             return <SpotTheDifference {...props} />;
           }}
         />
         <PrivateRoute
-          path="/round-2"
+          path="/round-1"
           component={props => {
             return <PumpkinSmash {...props} />;
           }}
         />
         <PrivateRoute
-          path="/round-3"
+          path="/round-2"
           component={props => {
             return <CardMatch {...props} />;
           }}
