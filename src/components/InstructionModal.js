@@ -13,6 +13,22 @@ const InstructionModal = ({ visible, toggle }) => {
               <u>How to play Curse of NEXT Academy?</u>
             </h4>
             <p>
+              <strong>
+                <u>Disclaimer!</u>
+              </strong>
+            </p>
+            <p>
+              This game was designed to be best enjoyed as an app on your phone!
+            </p>
+            <p>
+              <strong>iOS</strong>: Open using Safari and "Add to Homescreen" in
+              the share menu.
+            </p>
+            <p>
+              <strong>Android</strong>: Open in Chrome and you will be prompted
+              to install to homescreen.
+            </p>
+            <p>
               <u>Round 1:</u>
             </p>
             <p>
@@ -35,6 +51,12 @@ const InstructionModal = ({ visible, toggle }) => {
               Click on the differences on the lower image, if you find a correct
               difference it will be shown with a red circle.
             </p>
+            <button
+              onClick={() => toggle()}
+              className="btn-instruction mx-auto d-block font-alt"
+            >
+              Got it!
+            </button>
           </div>
         </div>
       </div>

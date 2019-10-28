@@ -366,3 +366,16 @@ body {
   background-color: rgb(204, 91, 16);
   color: white;
 }
+
+.btn-instruction {
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-instruction:hover {
+  background-color: black;
+  color: white;
+}
