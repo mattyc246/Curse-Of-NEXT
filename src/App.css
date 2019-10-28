@@ -221,8 +221,13 @@ body {
   width: 50%;
   padding: 5px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
+.btn-orange:hover {
+  background-color: rgb(204, 91, 16);
+  color: white;
+}
 /* IMAGE STYLING */
 
 .flex-img-box {
@@ -314,6 +319,10 @@ body {
 
 /* WIDTH */
 
+.w-25 {
+  width: 25%;
+}
+
 .w-50 {
   width: 50%;
 }
@@ -325,4 +334,35 @@ body {
 
 .d-block {
   display: block;
+}
+
+/* FOOTER */
+
+.footer {
+  width: 90%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  transform: translate(-50%);
+}
+
+.btn-footer {
+  background-color: transparent;
+  border: 1px solid rgb(204, 91, 16);
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-footer:hover {
+  background-color: rgb(204, 91, 16);
+  color: white;
 }

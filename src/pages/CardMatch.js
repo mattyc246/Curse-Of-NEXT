@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import MainContainer from "../containers/MainContainer";
 import CardBoard from "../components/CardBoard";
 import ScareBar from "../components/ScareBar";
+import Footer from "../components/Footer";
 
 const CardMatch = ({ history }) => {
   const [inPlay, setInPlay] = useState(true);
@@ -19,14 +20,22 @@ const CardMatch = ({ history }) => {
           </div>
         </>
       ) : (
-        <button
-          onClick={() => {
-            history.push("/round-3");
-          }}
-          className="start-btn centered font-alt"
-        >
-          Next Round
-        </button>
+        <>
+          <button
+            onClick={() => {
+              history.push("/round-3");
+            }}
+            className="start-btn centered font-alt"
+          >
+            Next Round
+          </button>
+          <Footer
+            message={"Learn to build advanced UI like this with React.js!"}
+            link={
+              "https://www.nextacademy.com/quantum-degrees/coding/full-time/frontend-react-js"
+            }
+          />
+        </>
       )}
     </MainContainer>
   );

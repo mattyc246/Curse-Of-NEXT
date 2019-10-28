@@ -5,6 +5,7 @@ import DiffCircle from "../components/DiffCircle";
 import ScareBar from "../components/ScareBar";
 import ScaryImage from "../assets/images/portrait-lady-2.jpg";
 import ScreamAudio from "../assets/audio/terrible-scream.mp3";
+import Footer from "../components/Footer";
 
 const SpotTheDifference = ({ history }) => {
   const audioFile = new Audio(ScreamAudio);
@@ -64,18 +65,28 @@ const SpotTheDifference = ({ history }) => {
           <img className="scary-lady" src={ScaryImage} alt="scary-lady" />
         </div>
       ) : buttonShown ? (
-        <button
-          onClick={() => {
-            setScareMe(true);
-            audioFile.play();
-            setTimeout(() => {
-              history.push("end");
-            }, 2000);
-          }}
-          className="start-btn centered font-alt"
-        >
-          Continue
-        </button>
+        <>
+          <button
+            onClick={() => {
+              setScareMe(true);
+              audioFile.play();
+              setTimeout(() => {
+                history.push("end");
+              }, 2000);
+            }}
+            className="start-btn centered font-alt"
+          >
+            Continue
+          </button>
+          <Footer
+            message={
+              "Learn to build games like this and more in our 10 week Full Stack Bootcamp!"
+            }
+            link={
+              "https://www.nextacademy.com/quantum-degrees/coding/full-time/full-stack-web-development"
+            }
+          />
+        </>
       ) : (
         <div className="flex-img-box">
           <div className="spd-container">

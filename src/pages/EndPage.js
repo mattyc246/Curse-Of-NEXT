@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MainContainer from "../containers/MainContainer";
 import useStores from "../hooks/useStores";
+import Footer from "../components/Footer";
 
 const EndPage = () => {
   const {
@@ -31,18 +32,27 @@ const EndPage = () => {
           You completed the game in:
         </h4>
         <h2 className="font-alt text-orange text-center">
-          {minutes} minutes and {seconds} seconds!
+          {minutes} minute{minutes > 1 ? "s" : ""}
+          <br />
+          {seconds} second{seconds > 1 ? "s" : ""}!
         </h2>
         <p className="font-alt text-orange text-center">
-          Leave your details below to stand a chance to win 2 tickets to Hauntu.
+          Follow the link below and fill out your details to stand a chance to
+          win 2 tickets to Hauntu Immersive Horror Experience.
         </p>
       </div>
       <button
         onClick={() => submitDetails()}
         className="btn-orange text-orange font-alt mx-auto d-block"
       >
-        Open Form
+        Open Google Form
       </button>
+      <Footer
+        message={
+          "Start your coding journey with us now! What are you waiting for?"
+        }
+        link={"https://www.nextacademy.com"}
+      />
     </MainContainer>
   );
 };
