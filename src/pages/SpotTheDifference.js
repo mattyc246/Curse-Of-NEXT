@@ -88,32 +88,36 @@ const SpotTheDifference = ({ history }) => {
           />
         </>
       ) : (
-        <div className="flex-img-box">
-          <div className="spd-container">
-            {diffCircles.map(circle => {
-              return (
-                <DiffCircle
-                  key={circle.id}
-                  circleId={circle.id}
-                  posX={circle.posX}
-                  posY={circle.posY}
-                  size={circle.size}
-                  visible={circle.visible}
-                  spottedDiff={spottedDiff}
-                />
-              );
-            })}
-            <img src={spotTheDiffImg[0]} alt="std" style={{ width: "100%" }} />
+        <>
+          <div className="flex-img-box">
+            <div className="spd-container">
+              {diffCircles.map(circle => {
+                return (
+                  <DiffCircle
+                    key={circle.id}
+                    circleId={circle.id}
+                    posX={circle.posX}
+                    posY={circle.posY}
+                    size={circle.size}
+                    visible={circle.visible}
+                    spottedDiff={spottedDiff}
+                  />
+                );
+              })}
+              <img
+                src={spotTheDiffImg[0]}
+                alt="std"
+                style={{ width: "100%" }}
+              />
+            </div>
           </div>
-        </div>
+          <div className="w-50 mx-auto">
+            <p className="text-orange text-center font-alt">
+              Find all 8 differences. Click on the bottom picture.
+            </p>
+          </div>
+        </>
       )}
-      {/* <audio
-        ref={audioFile}
-        src={ScreamAudio}
-        onEnded={() => {
-          history.push("/end");
-        }}
-      /> */}
     </MainContainer>
   );
 };
