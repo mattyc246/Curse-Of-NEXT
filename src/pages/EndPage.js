@@ -26,11 +26,13 @@ const EndPage = () => {
       <h2 className="font-main text-orange big-font text-center">
         Congratulations!
       </h2>
-      <div className="w-50">
+      <div className="w-50 mx-auto">
         <h4 className="font-alt text-orange text-center">
-          You completed the game in <strong>{minutes} minutes</strong> and{" "}
-          <strong>{seconds} seconds</strong>!
+          You completed the game in:
         </h4>
+        <h2 className="font-alt text-orange text-center">
+          {minutes} minutes and {seconds} seconds!
+        </h2>
         <p className="font-alt text-orange text-center">
           Leave your details below to stand a chance to win 2 tickets to Hauntu.
         </p>
