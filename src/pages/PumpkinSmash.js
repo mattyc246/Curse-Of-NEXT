@@ -18,7 +18,14 @@ const PumpkinSmash = ({ history }) => {
     <MainContainer>
       <ScareBar />
       {inPlay ? (
-        <PumpkinBoard setInPlay={setInPlay} />
+        <>
+          <PumpkinBoard setInPlay={setInPlay} />
+          <div className="w-50 mx-auto">
+            <p className="text-orange text-center font-alt">
+              Smash all the pumpkins as fast as possible.
+            </p>
+          </div>
+        </>
       ) : (
         <button
           onClick={() => {

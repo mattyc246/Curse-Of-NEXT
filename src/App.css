@@ -147,11 +147,10 @@ body {
 
 .font-main {
   font-family: "Creepster", cursive;
-  text-align: center;
 }
 
 .font-alt {
-  font-family: "Griffy", cursive;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 .big-font {
@@ -160,6 +159,10 @@ body {
 
 .text-orange {
   color: rgb(204, 91, 16);
+}
+
+.text-center {
+  text-align: center;
 }
 
 /* BUTTON STYLING */
@@ -208,6 +211,16 @@ body {
   background-color: rgb(204, 91, 16);
   color: white;
   /* animation: wavy-btn 1s 1; */
+}
+
+.btn-orange {
+  background-color: transparent;
+  border: 1px solid rgb(204, 91, 16);
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 /* IMAGE STYLING */
@@ -273,4 +286,43 @@ body {
     position: relative;
     width: 100%;
   }
+}
+
+/* MODAL */
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  position: relative;
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+  width: 80%;
+  overflow: scroll;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* WIDTH */
+
+.w-50 {
+  width: 50%;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.d-block {
+  display: block;
 }

@@ -9,7 +9,10 @@ const ScareBar = () => {
   return (
     <>
       <div>
-        <h2 className="font-main text-orange" style={{ margin: "5px" }}>
+        <h2
+          className="font-main text-orange text-center"
+          style={{ margin: "5px" }}
+        >
           Time:{" "}
           {minutes > 0 ? `${minutes < 10 ? `0${minutes}` : minutes}:` : "00:"}
           {seconds < 10 ? `0${seconds}` : seconds}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 import FlipCard from "./FlipCard";
 
-const CardBoard = ({ history }) => {
+const CardBoard = ({ history, setInPlay }) => {
   const shuffle = array => {
     return array.sort(() => Math.random() - 0.5);
   };
@@ -52,7 +52,7 @@ const CardBoard = ({ history }) => {
 
     if (winner) {
       setTimeout(() => {
-        history.push("/round-3");
+        setInPlay(false);
       }, 800);
     } else {
       callback();

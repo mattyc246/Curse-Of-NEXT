@@ -10,9 +10,21 @@ const CardMatch = ({ history }) => {
     <MainContainer>
       <ScareBar />
       {inPlay ? (
-        <CardBoard setInPlay={setInPlay} />
+        <>
+          <CardBoard setInPlay={setInPlay} />
+          <div className="w-50 mx-auto">
+            <p className="text-orange text-center font-alt">
+              Match all 12 of the Halloween cards.
+            </p>
+          </div>
+        </>
       ) : (
-        <button onClick={() => {}} className="start-btn centered font-alt">
+        <button
+          onClick={() => {
+            history.push("/round-3");
+          }}
+          className="start-btn centered font-alt"
+        >
           Next Round
         </button>
       )}
