@@ -50,7 +50,7 @@ const EndPage = () => {
       <button
         onClick={() => window.location.reload()}
         className="btn-orange text-orange font-alt mx-auto d-block"
-        style={{ marginTop: "3px" }}
+        style={{ marginTop: "10px" }}
       >
         Play Again?
       </button>
