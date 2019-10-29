@@ -32,7 +32,7 @@ const CardMatch = ({ history }) => {
           <Footer
             message={"Learn to build advanced UI like this with React.js!"}
             link={
-              "https://www.nextacademy.com/quantum-degrees/coding/full-time/frontend-react-js"
+              "https://www.nextacademy.com/quantum-degrees/coding/full-time/frontend-react-js?utm_source=halloween-game&utm_medium=cta-button-card-match&utm_campaign=halloween-matt"
             }
           />
         </>

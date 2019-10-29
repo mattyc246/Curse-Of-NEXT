@@ -58,7 +58,9 @@ const EndPage = () => {
         message={
           "Start your coding journey with us now! What are you waiting for?"
         }
-        link={"https://www.nextacademy.com"}
+        link={
+          "https://www.nextacademy.com/?utm_source=halloween-game&utm_medium=cta-button-end&utm_campaign=halloween-matt"
+        }
       />
     </MainContainer>
   );

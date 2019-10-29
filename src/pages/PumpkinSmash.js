@@ -42,7 +42,7 @@ const PumpkinSmash = ({ history }) => {
               "Learn to build games like this with HTML, CSS & JavaScript!"
             }
             link={
-              "https://www.nextacademy.com/quantum-degrees/coding/full-time/frontend-website-html-css-javascript"
+              "https://www.nextacademy.com/quantum-degrees/coding/full-time/frontend-website-html-css-javascript?utm_source=halloween-game&utm_medium=cta-button-pumpkin-smash&utm_campaign=halloween-matt"
             }
           />
         </>
