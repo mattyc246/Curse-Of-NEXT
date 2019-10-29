@@ -9,7 +9,7 @@ const EndPage = () => {
   } = useStores();
 
   const [gFormUrl, setFormUrl] = useState(
-    "https://docs.google.com/forms/d/e/1FAIpQLSd6JYOdjsO-ejXcp0-zilcL649aPj8jepFqrgqlcwU4n2P67Q/viewform?usp=pp_url&entry.1158048600="
+    "https://nextacademy.typeform.com/to/YSFfYP?highscore="
   );
 
   useEffect(() => {
@@ -45,7 +45,7 @@ const EndPage = () => {
         onClick={() => submitDetails()}
         className="btn-orange text-orange font-alt mx-auto d-block"
       >
-        Open Google Form
+        Submit Details
       </button>
       <button
         onClick={() => window.location.reload()}

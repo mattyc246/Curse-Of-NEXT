@@ -41,9 +41,9 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1.5px solid rgb(204, 91, 16);
+  border: 1.5px solid rgb(240, 127, 31);
   border-radius: 5px;
-  background-color: rgb(70, 22, 133);
+  background-color: rgb(60, 36, 69);
   padding: 10px;
   box-sizing: border-box;
 }
@@ -53,7 +53,7 @@ body {
   box-sizing: border-box;
   padding: 10px;
   height: 80%;
-  background-color: rgb(204, 91, 16);
+  background-color: rgb(240, 127, 31);
   border: 1px solid black;
   border-radius: 10px;
   display: flex;
@@ -68,7 +68,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: rgb(70, 22, 133);
+  background-color: rgb(60, 36, 69);
   border: 1px solid white;
   border-radius: 10px;
   position: relative;
@@ -80,11 +80,11 @@ body {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  background: url(./assets/images/patch.png);
+  background: url(./assets/images/patch2.png);
   background-repeat: no-repeat;
   background-size: contain;
   box-sizing: border-box;
-  border: 2px solid rgb(204, 91, 16);
+  border: 2px solid rgb(240, 127, 31);
   border-radius: 5px;
 }
 
@@ -165,7 +165,7 @@ body {
 }
 
 .text-orange {
-  color: rgb(204, 91, 16);
+  color: rgb(240, 127, 31);
 }
 
 .text-center {
@@ -203,8 +203,8 @@ body {
   height: 50px;
   margin-top: 10px;
   background-color: transparent;
-  color: rgb(204, 91, 16);
-  border: 1px solid rgb(204, 91, 16);
+  color: rgb(240, 127, 31);
+  border: 1px solid rgb(240, 127, 31);
   border-radius: 10px;
   font-size: 150%;
   position: absolute;
@@ -215,14 +215,14 @@ body {
 }
 
 .start-btn:hover {
-  background-color: rgb(204, 91, 16);
+  background-color: rgb(240, 127, 31);
   color: white;
   /* animation: wavy-btn 1s 1; */
 }
 
 .btn-orange {
   background-color: transparent;
-  border: 1px solid rgb(204, 91, 16);
+  border: 1px solid rgb(240, 127, 31);
   margin-left: auto;
   margin-right: auto;
   width: 50%;
@@ -232,7 +232,7 @@ body {
 }
 
 .btn-orange:hover {
-  background-color: rgb(204, 91, 16);
+  background-color: rgb(240, 127, 31);
   color: white;
 }
 /* IMAGE STYLING */
@@ -245,7 +245,7 @@ body {
 
 .scary-lady {
   width: 65%;
-  height:auto;
+  height: auto;
 }
 
 .spd-container {
@@ -264,7 +264,7 @@ body {
   }
   .scary-lady {
     width: 75%;
-    height:auto;
+    height: auto;
   }
   .spd-container {
     width: 80%;
@@ -289,7 +289,7 @@ body {
   }
   .scary-lady {
     width: 80%;
-    height:auto;
+    height: auto;
   }
   .spd-container {
     width: 100%;
@@ -302,6 +302,9 @@ body {
     position: relative;
     width: 100%;
   }
+}
+
+@media (max-width: 380px) {
   .xs-sm {
     font-size: 0.75em;
   }
@@ -373,14 +376,14 @@ body {
 
 .btn-footer {
   background-color: transparent;
-  border: 1px solid rgb(204, 91, 16);
+  border: 1px solid rgb(240, 127, 31);
   padding: 5px;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .btn-footer:hover {
-  background-color: rgb(204, 91, 16);
+  background-color: rgb(240, 127, 31);
   color: white;
 }
 

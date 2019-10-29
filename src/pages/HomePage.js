@@ -20,18 +20,15 @@ const HomePage = ({ history }) => {
         </h1>
         <div className="w-50 mx-auto">
           <p className="text-orange text-center font-alt xs-sm">
-            Complete all 3 rounds of the Curse of NEXT Academy game and stand the
-            chance to win 2 tickets to Hauntu Immersive Horror Experience.{" "}
+            Complete all 3 rounds of the Curse of NEXT Academy game and stand
+            the chance to win 2 tickets to Hauntu Immersive Horror Experience.{" "}
           </p>
         </div>
-        <h2 className="font-alt text-orange text-center">
-          <u>How to play?</u>
-        </h2>
         <button
           className="font-alt text-center btn-orange text-orange mx-auto d-block"
           onClick={toggle}
         >
-          View Instructions
+          Read how to play!
         </button>
         <button
           className="start-btn font-alt"
