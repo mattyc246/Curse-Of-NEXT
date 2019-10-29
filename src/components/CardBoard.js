@@ -129,7 +129,7 @@ const CardBoard = ({ history, setInPlay }) => {
             flipped={card.flipped}
             matched={card.matched}
             flipCard={flipCard}
-            clickable={clickable}
+            clickable={!card.flipped}
           />
         );
       })}
