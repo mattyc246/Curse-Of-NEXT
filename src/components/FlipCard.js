@@ -38,7 +38,9 @@ const FlipCard = ({ flipped, value, matched, cardId, flipCard, clickable }) => {
     <>
       <div
         className={`flip-card ${flipped ? "flipped" : ""}`}
-        onClick={matched || !clickable ? null : () => flipCard(cardId)}
+        onClick={
+          matched || !clickable || flipped ? null : () => flipCard(cardId)
+        }
       >
         {flipped ? (
           <img
