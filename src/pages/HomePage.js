@@ -20,7 +20,7 @@ const HomePage = ({ history }) => {
         </h1>
         <div className="w-50 mx-auto">
           <p className="text-orange text-center font-alt xs-sm">
-            Complete all 3 rounds of the Curse of NEXT Academy game. Stand the
+            Complete all 3 rounds of the Curse of NEXT Academy game and stand the
             chance to win 2 tickets to Hauntu Immersive Horror Experience.{" "}
           </p>
         </div>

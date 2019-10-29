@@ -47,6 +47,13 @@ const EndPage = () => {
       >
         Open Google Form
       </button>
+      <button
+        onClick={() => window.location.reload()}
+        className="btn-orange text-orange font-alt mx-auto d-block"
+        style={{ marginTop: "3px" }}
+      >
+        Play Again?
+      </button>
       <Footer
         message={
           "Start your coding journey with us now! What are you waiting for?"

@@ -33,7 +33,7 @@ const InstructionModal = ({ visible, toggle }) => {
             </p>
             <p>
               Smash all the Pumpkins as fast as possible. Hint: They may need
-              hitting more than once. 😉
+              hitting more than once. <span role="img" aria-label="wink">😉</span>
             </p>
             <p>
               <u>Round 2:</u>
