@@ -31,11 +31,11 @@ const EndPage = () => {
         <h4 className="font-alt text-orange text-center xs-sm">
           You completed the game in:
         </h4>
-        <h2 className="font-alt text-orange text-center xs-sm">
+        <h4 className="font-alt text-orange text-center">
           {minutes} minute{minutes > 1 ? "s" : ""}
           <br />
           {seconds} second{seconds > 1 ? "s" : ""}!
-        </h2>
+        </h4>
         <p className="font-alt text-orange text-center xs-sm">
           Follow the link below and fill out your details to stand a chance to
           win 2 tickets to Hauntu Immersive Horror Experience.
