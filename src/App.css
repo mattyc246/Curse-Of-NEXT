@@ -245,6 +245,7 @@ body {
 
 .scary-lady {
   width: 65%;
+  height:auto;
 }
 
 .spd-container {
@@ -263,6 +264,7 @@ body {
   }
   .scary-lady {
     width: 75%;
+    height:auto;
   }
   .spd-container {
     width: 80%;
@@ -287,6 +289,7 @@ body {
   }
   .scary-lady {
     width: 80%;
+    height:auto;
   }
   .spd-container {
     width: 100%;
