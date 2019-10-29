@@ -14,7 +14,7 @@ const CardMatch = ({ history }) => {
         <>
           <CardBoard setInPlay={setInPlay} />
           <div className="w-50 mx-auto">
-            <p className="text-orange text-center font-alt">
+            <p className="text-orange text-center font-alt xs-sm">
               Match all 12 of the Halloween cards.
             </p>
           </div>

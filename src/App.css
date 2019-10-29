@@ -283,9 +283,10 @@ body {
   }
   .start-btn {
     font-size: 125%;
+    width: 75%;
   }
   .scary-lady {
-    width: 100%;
+    width: 90%;
   }
   .spd-container {
     width: 100%;
@@ -297,6 +298,12 @@ body {
   .pumpkin-board {
     position: relative;
     width: 100%;
+  }
+  .xs-sm {
+    font-size: 0.75em;
+  }
+  .xs-md {
+    font-size: 175%;
   }
 }
 

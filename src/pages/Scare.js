@@ -11,7 +11,11 @@ const Scare = ({ history }) => {
   return (
     <MainContainer>
       <div className="flex-img-box">
-        <img className="scary-lady" src={ScaryImage} alt="scary-lady" />
+        <img
+          className="scary-lady mx-auto d-block"
+          src={ScaryImage}
+          alt="scary-lady"
+        />
       </div>
       <audio
         ref={audioFile}

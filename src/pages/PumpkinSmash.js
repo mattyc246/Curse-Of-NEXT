@@ -22,7 +22,7 @@ const PumpkinSmash = ({ history }) => {
         <>
           <PumpkinBoard setInPlay={setInPlay} />
           <div className="w-50 mx-auto">
-            <p className="text-orange text-center font-alt">
+            <p className="text-orange text-center font-alt xs-sm">
               Smash all the pumpkins as fast as you can!
             </p>
           </div>

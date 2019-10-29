@@ -112,7 +112,7 @@ const SpotTheDifference = ({ history }) => {
             </div>
           </div>
           <div className="w-50 mx-auto">
-            <p className="text-orange text-center font-alt">
+            <p className="text-orange text-center font-alt xs-sm">
               Find all 8 differences. Click on the bottom picture.
             </p>
           </div>
