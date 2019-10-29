@@ -14,7 +14,7 @@ const HomePage = ({ history }) => {
   return (
     <>
       <MainContainer>
-        <h1 className="font-main text-orange big-font text-center">
+        <h1 className="font-main text-orange big-font text-center xs-md">
           The curse of <br />
           NEXT Academy
         </h1>
